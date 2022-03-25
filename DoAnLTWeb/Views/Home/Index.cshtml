@@ -13,63 +13,91 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<!--Slider-->
-<head>
-    <div class="container body-content">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="~/Content/images/banner_slider_cannon1.jpg" style="width:100%" height="500px">
-            </div>
+<body>
+    <header>
+        <!--Slider-->
+        <div class="container body-content">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="~/Content/images/banner_slider_cannon1.jpg" style="width:100%" height="500px">
+                </div>
 
-            <div class="mySlides fade">
-                <img src="~/Content/images/banner_slider_fuji.jpg" style="width:100%" height="500px">
-            </div>
+                <div class="mySlides fade">
+                    <img src="~/Content/images/banner_slider_fuji.jpg" style="width:100%" height="500px">
+                </div>
 
-            <div class="mySlides fade">
-                <img src="~/Content/images/banner_slider_sony.jpg" style="width:100%" height="500px">
+                <div class="mySlides fade">
+                    <img src="~/Content/images/banner_slider_sony.jpg" style="width:100%" height="500px">
+                </div>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+            <p>
+                Mỹ tung lệnh trừng phạt nhắm vào kho vàng 2.300 tấn của Nga
+                Bộ Tài chính Mỹ thông báo cấm các giao dịch vàng với Nga,
+                lần đầu tiên nhắm vào kho dự trữ vàng 2.300 tấn trị giá 140 tỷ USD của nước này.
+
+                "Công dân Mỹ bị cấm tham gia vào bất cứ giao dịch nào,
+                trong đó có giao dịch vàng, liên quan đến Ngân hàng Trun
+                g ương Nga, Quỹ Tài chính Quốc gia Nga hoặc Bộ Tài chính Nga", Bộ Tài chín
+                h Mỹ hôm 24/3 cho biết.
+
+                Bộ Tài chính Mỹ cho hay lệnh cấm giao dịch vàng này được t
+                hực hiện theo sắc lệnh hành pháp của Tổng thống Joe Biden.
+            </p>
+            <br>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+            </script>
+        </div>
+        <!--Slider-->
+        <!--logo thuong hieu-->
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="~/Content/images/logo_canon.png" />
+                    </div>
+
+                    <div class="col-5">
+                        <img src="~/Content/images/logo_fujìilm.png" />
+                    </div>
+
+                    <div class="col-5">
+                        <img src="~/Content/images/logo_nikon.png" />
+                    </div>
+
+                    <div class="col-5">
+                        <img src="~/Content/images/logo_sony.png" />
+                    </div>
+
+                    <div class="col-5">
+                        <img src="~/Content/images/logo_pentax.png" />
+                    </div>
+                </div>
             </div>
         </div>
-        <p>
-            Mỹ tung lệnh trừng phạt nhắm vào kho vàng 2.300 tấn của Nga
-            Bộ Tài chính Mỹ thông báo cấm các giao dịch vàng với Nga, 
-            lần đầu tiên nhắm vào kho dự trữ vàng 2.300 tấn trị giá 140 tỷ USD của nước này.
+    </header>
+</body>
 
-            "Công dân Mỹ bị cấm tham gia vào bất cứ giao dịch nào,
-            trong đó có giao dịch vàng, liên quan đến Ngân hàng Trun
-            g ương Nga, Quỹ Tài chính Quốc gia Nga hoặc Bộ Tài chính Nga", Bộ Tài chín
-            h Mỹ hôm 24/3 cho biết.
-
-            Bộ Tài chính Mỹ cho hay lệnh cấm giao dịch vàng này được t
-            hực hiện theo sắc lệnh hành pháp của Tổng thống Joe Biden.
-        </p>
-        <br>
-        <script>
-            let slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display ="none";
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) { slideIndex = 1 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-                setTimeout(showSlides, 2000); // Change image every 2 seconds
-            }
-        </script>
-    </div>
-</head>
-
-<!--Slider-->

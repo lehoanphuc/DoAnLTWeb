@@ -131,9 +131,17 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\appstore.png" />
     <Content Include="Content\images\banner_slider_cannon1.jpg" />
     <Content Include="Content\images\banner_slider_fuji.jpg" />
     <Content Include="Content\images\banner_slider_sony.jpg" />
+    <Content Include="Content\images\chplay.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo_canon.png" />
+    <Content Include="Content\images\logo_fujìilm.png" />
+    <Content Include="Content\images\logo_nikon.png" />
+    <Content Include="Content\images\logo_pentax.png" />
+    <Content Include="Content\images\logo_sony.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

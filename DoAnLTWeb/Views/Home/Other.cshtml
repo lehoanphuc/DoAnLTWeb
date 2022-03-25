@@ -4,5 +4,63 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Other</h2>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Digitals Store</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="~/Content/Site.css" rel='stylesheet' type='text/css' />
+    <link href="~/Scripts/scripts.js" rel='' type='text/css' />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <!--Slider-->
+        <div class="container body-content">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="~/Content/images/banner_slider_cannon1.jpg" style="width:100%" height="500px">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="~/Content/images/banner_slider_fuji.jpg" style="width:100%" height="500px">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="~/Content/images/banner_slider_sony.jpg" style="width:100%" height="500px">
+                </div>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <h1>Sản Phẩm Khác nha</h1>
+            <br>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+            </script>
+        </div>
+        <!--Slider-->
+    </header>
+</body>
 
